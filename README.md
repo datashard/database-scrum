@@ -1,4 +1,4 @@
-# Lernfeld 5 - Git Repository
+# Lernfeld 5 - Aufgabe
 Ausgehend von den bereits im Produktportfolio befindlichen Bio-Lebensmitteln soll ein Rezept-Service mit darauf angepasster Rezept-Box eingeführt werden. Darüber hinaus soll die Option bestehen, Rezepte anhand bestimmter Ernährungskategorien sowie Beschränkungen aufgrund von Allergenen / Unverträglichkeiten zu filtern. 
 Die Boxen sollen dann später entsprechend der in den Rezepten verwendeten Zutaten und Mengen bestückt werden.
 
@@ -20,4 +20,7 @@ Hinweis: Die Entwicklung und Anbindung einer grafischen Benutzeroberfläche ist 
     - dass ein Kunde Auskunft seiner Daten nach DSGVO beantragt oder
     - die Löschung seiner Daten verlangt.
 
-Klären Sie für beide Fälle sowohl die rechtlichen Grundlagen und implementieren Sie die technische Umsetzung (Beispielsweise als SQL-Skript). 
+Klären Sie für beide Fälle sowohl die rechtlichen Grundlagen und implementieren Sie die technische Umsetzung (Beispielsweise als SQL-Skript).
+
+# Quicklinks
+Quicklink to Trello
