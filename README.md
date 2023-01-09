@@ -1,13 +1,6 @@
 # Quicklinks
  - [Lernfeld 5](https://moodle.itech-bs14.de/mod/page/view.php?id=41366)
  - [Trello](https://trello.com/b/eowCjhCk/lernfeld-5)
- 
- # Task List
-  - [ ] #1
-  - [ ] #2
-  - [ ] #3
-  - [ ] #4
-  - [ ] #5
 
 # Lernfeld 5 - Aufgabe
 Ausgehend von den bereits im Produktportfolio befindlichen Bio-Lebensmitteln soll ein Rezept-Service mit darauf angepasster Rezept-Box eingeführt werden. Darüber hinaus soll die Option bestehen, Rezepte anhand bestimmter Ernährungskategorien sowie Beschränkungen aufgrund von Allergenen / Unverträglichkeiten zu filtern. 
