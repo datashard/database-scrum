@@ -24,3 +24,4 @@ Klären Sie für beide Fälle sowohl die rechtlichen Grundlagen und implementier
 
 # Quicklinks
 Quicklink to Trello
+https://moodle.itech-bs14.de/mod/page/view.php?id=41366
