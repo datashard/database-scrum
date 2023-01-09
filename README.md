@@ -23,5 +23,6 @@ Hinweis: Die Entwicklung und Anbindung einer grafischen Benutzeroberfläche ist 
 Klären Sie für beide Fälle sowohl die rechtlichen Grundlagen und implementieren Sie die technische Umsetzung (Beispielsweise als SQL-Skript).
 
 # Quicklinks
-Quicklink to Trello
-https://moodle.itech-bs14.de/mod/page/view.php?id=41366
+ - [Lernfeld 5](https://moodle.itech-bs14.de/mod/page/view.php?id=41366)
+ - [Trello](https://trello.com/b/eowCjhCk/lernfeld-5)
+ 
