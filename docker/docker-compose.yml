@@ -14,7 +14,13 @@ services:
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=admin
       - MYSQL_ROOT_PASSWORD=root
-
+      - LANG=C.UTF_8
     volumes:
       - ./mysql:/var/lib/mysql
       - ../sql/dump:/docker-entrypoint-initdb.d
+    command:
+      [
+        "mysqld",
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_unicode_ci",
+      ]
