@@ -13,7 +13,7 @@ insert into beschraenkungzutat values (1004,1011);
 insert into beschraenkungzutat values (1002,6408);
 
 
--- Ernährungskategorie
+-- Ernährungskategorien
 insert into ernaehrungskategorie values (1001, "Vegan");
 insert into ernaehrungskategorie values (1002, "Vegetarisch");
 insert into ernaehrungskategorie values (1003, "Low Carb");
@@ -47,12 +47,10 @@ insert into ernaehrungskategoriezutat values (1003,1007);
 
 insert into ernaehrungskategoriezutat values (1004,6408);
 
-
-
 -- Rezepte
-insert into REZEPT values (1001, "Wiener Würstchen mit Tomate- Mozarella Salat und Süßkartoffelpommes");
-insert into REZEPT values (1002, "Gemüsepatties mit Salat");
-insert into REZEPT values (1003, "Couscous-bowl");
+insert into rezept values (1001, "Wiener Würstchen mit Tomate- Mozarella Salat und Süßkartoffelpommes");
+insert into rezept values (1002, "Gemüsepatties mit Salat");
+insert into rezept values (1003, "Couscous-bowl");
 
 insert into rezeptzutat values (1001,5001,1);
 insert into rezeptzutat values (1001,1003,3);
