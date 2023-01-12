@@ -75,7 +75,8 @@ create table beschraenkungzutat (
 
 create table ernaehrungskategorie (
     id integer not null,
-    ernaehrungskategoriename varchar(255)
+    ernaehrungskategoriename varchar(255),
+    primary key(id)
 );
 
 create table ernaehrungskategoriezutat (
