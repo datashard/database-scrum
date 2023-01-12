@@ -24,10 +24,10 @@ create table region(
 );
 
 create table bestellung(
-    id integer not null auto_increment,
+    id integer not null,
     bestelldatum date,
-    rechungsbetrag decimal(10,2),
     ref_kunde_id integer not null,
+    rechnungsbetrag decimal(10,2),
     primary key(id)
 );
 
