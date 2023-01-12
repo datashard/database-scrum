@@ -1,7 +1,7 @@
 create table kunde(
     id integer not null auto_increment,
     vorname varchar(255),
-    nachname varchar(255)
+    nachname varchar(255),
     email varchar(255),
     telefon varchar(255),
     ref_adresse_id integer not null,
@@ -75,7 +75,8 @@ create table beschraenkungzutat (
 
 create table ernaehrungskategorie (
     id integer not null,
-    ernaehrungskategoriename varchar(255)
+    ernaehrungskategoriename varchar(255),
+    primary key(id)
 );
 
 create table ernaehrungskategoriezutat (
