@@ -1,7 +1,7 @@
 create table kunde(
     id integer not null auto_increment,
     vorname varchar(255),
-    nachname varchar(255)
+    nachname varchar(255),
     email varchar(255),
     telefon varchar(255),
     ref_adresse_id integer not null,
