@@ -13,7 +13,7 @@ insert into beschraenkungzutat values (1004,1011);
 insert into beschraenkungzutat values (1002,6408);
 
 
--- Ernährungskategorie
+-- Ernährungskategorien
 insert into ernaehrungskategorie values (1001, "Vegan");
 insert into ernaehrungskategorie values (1002, "Vegetarisch");
 insert into ernaehrungskategorie values (1003, "Low Carb");
@@ -47,12 +47,10 @@ insert into ernaehrungskategoriezutat values (1003,1007);
 
 insert into ernaehrungskategoriezutat values (1004,6408);
 
-
-
 -- Rezepte
-insert into REZEPT values (1001, "Wiener Würstchen mit Tomate- Mozarella Salat und Süßkartoffelpommes");
-insert into REZEPT values (1002, "Gemüsepatties mit Salat");
-insert into REZEPT values (1003, "Couscous-bowl");
+insert into rezept values (1001, "Wiener Würstchen mit Tomate- Mozarella Salat und Süßkartoffelpommes");
+insert into rezept values (1002, "Gemüsepatties mit Salat");
+insert into rezept values (1003, "Couscous-bowl");
 
 insert into rezeptzutat values (1001,5001,1);
 insert into rezeptzutat values (1001,1003,3);
@@ -79,3 +77,18 @@ insert into rezeptzutat values (1003,1005,3);
 insert into rezeptzutat values (1003,1007,1);
 insert into rezeptzutat values (1003,1009,10);
 insert into rezeptzutat values (1003,9001,2);
+
+-- Region
+insert into region values (9001, "24354", "Weseby");
+insert into region values (9002, "21635", "Jork");
+insert into region values (9003, "19217", "Dechow");
+
+-- Adresse
+insert into adresse values (9001, "Dorfstraße", "74", 9001);
+insert into adresse values (9001, "Westerjork", "76", 9002);
+insert into adresse values (9003, "Molkereiwegkundekunde", "13", 9003);
+
+-- Lieferant
+insert into lieferant values (101, "Bio-Hof Müller", 9001, "04354-9080", "mueller@biohof.de");
+insert into lieferant values (102, "Bio-Hof Müller", 9002, "04162-4523", "info@biohof-altesland.de");
+insert into lieferant values (103, "Bio-Hof Müller", 9003, "038873-8976", "info@molkerei-henning.de");

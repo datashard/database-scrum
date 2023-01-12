@@ -3,6 +3,9 @@
  - [Trello](https://trello.com/b/eowCjhCk/lernfeld-5)
 
 # Lernfeld 5 - Aufgabe
+
+![Entity-Relationship-Diagram](https://github.com/datashard/database-scrum/blob/main/resources/entity_relation_ship.jpg)
+
 Ausgehend von den bereits im Produktportfolio befindlichen Bio-Lebensmitteln soll ein Rezept-Service mit darauf angepasster Rezept-Box eingeführt werden. Darüber hinaus soll die Option bestehen, Rezepte anhand bestimmter Ernährungskategorien sowie Beschränkungen aufgrund von Allergenen / Unverträglichkeiten zu filtern. 
 Die Boxen sollen dann später entsprechend der in den Rezepten verwendeten Zutaten und Mengen bestückt werden.
 

@@ -9,7 +9,7 @@ create table kunde(
 );
 
 create table adresse(
-    id integer not null auto_increment,
+    id integer not null,
     strasse varchar(255),
     hausnummer varchar(6) not null,
     ref_region_id integer not null,
@@ -17,7 +17,7 @@ create table adresse(
 );
 
 create table region(
-    id integer not null auto_increment,
+    id integer not null,
     plz varchar(5),
     ort varchar(255),
     primary key(id)
@@ -92,4 +92,3 @@ create table lieferant (
     email varchar(50),
     primary key(id)
 );
-
