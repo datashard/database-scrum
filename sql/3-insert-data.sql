@@ -77,3 +77,18 @@ insert into rezeptzutat values (1003,1005,3);
 insert into rezeptzutat values (1003,1007,1);
 insert into rezeptzutat values (1003,1009,10);
 insert into rezeptzutat values (1003,9001,2);
+
+-- Region
+insert into region values (9001, "24354", "Weseby");
+insert into region values (9002, "21635", "Jork");
+insert into region values (9003, "19217", "Dechow");
+
+-- Adresse
+insert into adresse values (9001, "Dorfstraße", "74", 9001);
+insert into adresse values (9001, "Westerjork", "76", 9002);
+insert into adresse values (9003, "Molkereiwegkundekunde", "13", 9003);
+
+-- Lieferant
+insert into lieferant values (101, "Bio-Hof Müller", 9001, "04354-9080", "mueller@biohof.de");
+insert into lieferant values (102, "Bio-Hof Müller", 9002, "04162-4523", "info@biohof-altesland.de");
+insert into lieferant values (103, "Bio-Hof Müller", 9003, "038873-8976", "info@molkerei-henning.de");
