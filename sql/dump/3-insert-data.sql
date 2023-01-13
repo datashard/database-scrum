@@ -29,7 +29,7 @@ insert into adresse values (2012, 'Molkereiwegkundekunde', '13', 2012);
 insert into kunde values (2001,'Kira','Wellensteyn','k.wellensteyn@yahoo.de','040/443322',2001);
 insert into kunde values (2002,'Dorothea','Foede','d.foede@web.de','040/543822',2002);
 insert into kunde values (2003,'Sigrid','Leberer','sigrid@leberer.de','0175/1234588',2003);
-insert into kunde values (2004,'Hanna','Soerensen','h.soerensen@yahoo.de','040/634578',2003);
+insert into kunde values (2004,'Hanna','Soerensen','h.soerensen@yahoo.de','040/634578',2004);
 insert into kunde values (2005,'Marten','Schnitter','schni_mart@gmail.com','0176/447587',2004);
 insert into kunde values (2006,'Belinda','Maurer','belinda1978@yahoo.de','040/332189',2006);
 insert into kunde values (2007,'Gessert','Armin','armin@gessert.de','040/443322',2007);
@@ -118,6 +118,7 @@ insert into ernaehrungskategoriezutat values (1002,4001);
 insert into ernaehrungskategoriezutat values (1003,1008);
 insert into ernaehrungskategoriezutat values (1003,1007);
 insert into ernaehrungskategoriezutat values (1004,6408);
+insert into ernaehrungskategoriezutat values (1004,5001);
 
 # Rezepte
  
