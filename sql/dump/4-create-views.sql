@@ -1,4 +1,4 @@
-create view v_kunde as 
+create view v_kunden_adressen_regionen as 
     select 
 	    k.id, vorname, nachname, email, telefon, 
         strasse, hausnummer,
