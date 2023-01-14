@@ -10,13 +10,13 @@ services:
       - SYS_NICE
     restart: always
     environment:
-      - MYSQL_DATABASE=db
+      - MYSQL_DATABASE=krautundrueben
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=admin
       - MYSQL_ROOT_PASSWORD=root
       - LANG=C.UTF_8
     volumes:
-      - ./mysql:/var/lib/mysql
+#      - ./mysql:/var/lib/mysql
       - ../sql/dump:/docker-entrypoint-initdb.d
     command:
       [
