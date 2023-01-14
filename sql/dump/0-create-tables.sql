@@ -1,3 +1,9 @@
+drop database if exists krautundrueben;
+create database if not exists krautundrueben;
+use krautundrueben;
+
+
+
 create table kunde(
     id integer not null auto_increment,
     vorname varchar(255),
