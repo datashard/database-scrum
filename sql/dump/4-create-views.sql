@@ -40,3 +40,11 @@ select r.rezeptname, (select count(vrz.bezeichnung) from v_rezepte_zutaten vrz w
 create view v_rezepte_kalorien as
 select r.rezeptname, (select sum(vrzk2.kalorien) from v_zutaten_rezepte_ernaehrungskategorien vrzk2 where vrzk2.rezeptname = r.rezeptname) kalorien from rezept r;
 
+create view v_rezept_kategorien_anzahl as
+select r.rezeptname,
+(select vrza.zutatenanzahl from v_rezepte_zutaten_anzahl vrza where vrza.rezeptname = r.rezeptname) anzahlzutaten,
+(select count(vzre.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre where vzre.rezeptname = r.rezeptname and vzre.ernaehrungskategoriename = "Vegan") anzahlvegan,
+(select count(vzre1.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre1 where vzre1.rezeptname = r.rezeptname and vzre1.ernaehrungskategoriename = "Vegetarisch") anzahlvegetarisch,
+(select count(vzre2.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre2 where vzre2.rezeptname = r.rezeptname and vzre2.ernaehrungskategoriename = "Low Carb") anzahllow_carb,
+(select count(vzre3.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre3 where vzre3.rezeptname = r.rezeptname and vzre3.ernaehrungskategoriename = "High Carb") anzahlhigh_carb
+from rezept r;
