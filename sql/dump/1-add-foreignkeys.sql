@@ -1,9 +1,9 @@
 
 alter table zutat add foreign key (ref_lieferant_id) references lieferant (id);
 
-alter table kunde add foreign key (ref_adresse_id) references adresse (id);
+-- alter table kunde add foreign key (ref_adresse_id) references adresse (id);
 
-alter table adresse add foreign key (ref_region_id) references region (id);
+-- alter table adresse add foreign key (ref_region_id) references region (id);
 
 alter table bestellung add foreign key (ref_kunde_id) references kunde (id);
 

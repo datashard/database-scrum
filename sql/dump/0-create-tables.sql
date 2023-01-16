@@ -2,15 +2,10 @@ drop database if exists krautundrueben;
 create database if not exists krautundrueben;
 use krautundrueben;
 
-
-
-create table kunde(
-    id integer not null auto_increment,
-    vorname varchar(255),
-    nachname varchar(255),
-    email varchar(255),
-    telefon varchar(255),
-    ref_adresse_id integer not null,
+create table region(
+    id integer not null,
+    plz varchar(5),
+    ort varchar(255),
     primary key(id)
 );
 
@@ -19,15 +14,26 @@ create table adresse(
     strasse varchar(255),
     hausnummer varchar(6) not null,
     ref_region_id integer not null,
-    primary key(id)
+    primary key(id),
+    foreign key (ref_region_id)
+        references region(id)
+        on delete cascade
 );
 
-create table region(
-    id integer not null,
-    plz varchar(5),
-    ort varchar(255),
-    primary key(id)
+create table kunde(
+    id integer not null auto_increment,
+    vorname varchar(255),
+    nachname varchar(255),
+    email varchar(255),
+    telefon varchar(255),
+    ref_adresse_id integer not null,
+    primary key(id),
+    foreign key (ref_adresse_id)
+        references adresse(id)
+        on delete cascade
+
 );
+
 
 create table bestellung(
     id integer not null,
