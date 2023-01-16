@@ -2,8 +2,6 @@ drop database if exists krautundrueben;
 create database if not exists krautundrueben;
 use krautundrueben;
 
-
-
 create table kunde(
     id integer not null auto_increment,
     vorname varchar(255),
@@ -32,7 +30,7 @@ create table region(
 create table bestellung(
     id integer not null,
     bestelldatum date,
-    ref_kunde_id integer not null,
+    ref_kunde_id integer,
     rechnungsbetrag decimal(10,2),
     primary key(id)
 );
