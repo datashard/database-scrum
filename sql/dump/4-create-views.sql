@@ -7,6 +7,15 @@ create view v_kunden_adressen_regionen as
     join adresse a on k.ref_adresse_id=a.id 
     join region r on a.ref_region_id=r.id;
 
+create view v_liefereanten_adressen_regionen as
+select 
+    	l.id as liederant_id, lieferantenname, telefon, email,
+        strasse, hausnummer,
+        plz, ort
+    from lieferant l
+    join adresse a on l.ref_adresse_id=a.id
+    join region r on a.ref_region_id=r.id;
+
 create view v_kunden_bestellungen_zutaten as
 select k.id as kunde_id, z.id as zutat_id, b.id as bestellung_id, k.vorname, k.nachname, b.rechnungsbetrag, bz.menge, z.einheit, z.kalorien, z.kohlenhydrate, z.protein, z.nettopreis from kunde k
 left join bestellung b on b.ref_kunde_id = k.id
