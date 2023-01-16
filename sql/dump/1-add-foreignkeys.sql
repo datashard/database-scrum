@@ -13,6 +13,9 @@ alter table bestellungzutat add foreign key (ref_zutat_id) references zutat (id)
 alter table rezeptzutat add foreign key (ref_rezept_id) references rezept (id);
 alter table rezeptzutat add foreign key (ref_zutat_id) references zutat (id);
 
+alter table bestellungrezept add foreign key (ref_bestellung_id) references bestellung (id);
+alter table bestellungrezept add foreign key (ref_rezept_id) references rezept (id);
+
 alter table beschraenkungzutat add foreign key (ref_beschraenkung_id) references beschraenkung (id);
 alter table beschraenkungzutat add foreign key (ref_zutat_id) references zutat (id);
 
