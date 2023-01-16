@@ -38,16 +38,22 @@ create table kunde(
 create table bestellung(
     id integer not null,
     bestelldatum date,
-    ref_kunde_id integer not null,
+    ref_kunde_id integer,
     rechnungsbetrag decimal(10,2),
     primary key(id)
 );
 
 create table bestellungzutat (
     ref_bestellung_id integer not null,
-    ref_zutat_id integer,
-    menge integer
+    ref_zutat_id integer not null,
+    menge integer not null
 );
+
+create table bestellungrezept (
+    ref_bestellung_id integer not null,
+    ref_rezept_id integer not null,
+    menge integer not null,
+)
 
 create table zutat (
     id integer not null,
