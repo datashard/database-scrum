@@ -1,5 +1,5 @@
 -- 3.1
-select distinct bezeichnung from v_zutaten_rezepte_ernaehrungskategorien where rezeptname = "Couscous-bowl";
+select distinct count(bezeichnung), bezeichnung from v_zutaten_rezepte_ernaehrungskategorien where rezeptname = "Couscous-bowl" group by bezeichnung;	
 
 -- 3.2 NOT WORKING YET
 select distinct rezeptname
@@ -26,3 +26,6 @@ select rezeptname from v_rezepte_kalorien where kalorien < 1000;
 select rezeptname from v_rezepte_zutaten_anzahl where zutatenanzahl < 5;
 
 -- 3.8
+
+-- 3.9
+delete from kunde where id=2007
