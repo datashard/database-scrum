@@ -20,8 +20,14 @@ left join rezept r on r.id = rz.ref_rezept_id
 left join ernaehrungskategoriezutat ez on z.id = ez.ref_zutat_id
 left join ernaehrungskategorie e on e.id = ez.ref_ernaehrungskategorie_id;
 
+create view v_rezepte_zutaten as
+select r.id, r.rezeptname, z.bezeichnung from rezept r
+inner join rezeptzutat rz on r.id = rz.ref_rezept_id
+inner join zutat z on z.id = rz.ref_zutat_id;
+
 create view v_rezepte_zutaten_anzahl as
-select r.rezeptname, (select count(vrzk2.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vrzk2 where vrzk2.rezeptname = r.rezeptname) zutatenanzahl from rezept r;
+select r.rezeptname, (select count(vrz.bezeichnung) from v_rezepte_zutaten vrz where vrz.rezeptname = r.rezeptname) zutatenanzahl from rezept r;
 
 create view v_rezepte_kalorien as
 select r.rezeptname, (select sum(vrzk2.kalorien) from v_zutaten_rezepte_ernaehrungskategorien vrzk2 where vrzk2.rezeptname = r.rezeptname) kalorien from rezept r;
+
