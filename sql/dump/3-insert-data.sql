@@ -1,4 +1,5 @@
 # Region
+insert into region values (1, '10101', 'Mülleimer');
 insert into region values (2001, '20249', 'Hamburg');
 insert into region values (2002, '22765', 'Hamburg');
 insert into region values (2003, '20459', 'Hamburg');
@@ -12,6 +13,7 @@ insert into region values (2010, '24354', 'Weseby');
 insert into region values (2011, '21635', 'Jork');
 insert into region values (2012, '19217', 'Dechow');
 
+insert into adresse values (1, 'Gelöschte Straße', '101', 1);
 insert into adresse values (2001, 'Eppendorfer Landstrasse', '104', 2001);
 insert into adresse values (2002, 'Ohmstraße', '23', 2002);
 insert into adresse values (2003, 'Bilser Berg', '6', 2003);
@@ -26,11 +28,13 @@ insert into adresse values (2011, 'Westerjork', '76', 2011);
 insert into adresse values (2012, 'Molkereiwegkundekunde', '13', 2012);
 
 # Kunden
+
+insert into kunde values (1,'Gelöschter','Kunde','kunde@example.de','000/0000000',1);
 insert into kunde values (2001,'Kira','Wellensteyn','k.wellensteyn@yahoo.de','040/443322',2001);
 insert into kunde values (2002,'Dorothea','Foede','d.foede@web.de','040/543822',2002);
 insert into kunde values (2003,'Sigrid','Leberer','sigrid@leberer.de','0175/1234588',2003);
 insert into kunde values (2004,'Hanna','Soerensen','h.soerensen@yahoo.de','040/634578',2004);
-insert into kunde values (2005,'Marten','Schnitter','schni_mart@gmail.com','0176/447587',2004);
+insert into kunde values (2005,'Marten','Schnitter','schni_mart@gmail.com','0176/447587',2005);
 insert into kunde values (2006,'Belinda','Maurer','belinda1978@yahoo.de','040/332189',2006);
 insert into kunde values (2007,'Gessert','Armin','armin@gessert.de','040/443322',2007);
 insert into kunde values (2008,'Jean-Marc','Haessig','jm@haessig.de','0178-67013390',2008);
