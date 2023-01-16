@@ -44,8 +44,8 @@ create table bestellungzutat (
 create table bestellungrezept (
     ref_bestellung_id integer not null,
     ref_rezept_id integer not null,
-    menge integer not null,
-)
+    menge integer not null
+);
 
 create table zutat (
     id integer not null,
