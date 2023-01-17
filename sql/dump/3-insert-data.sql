@@ -129,13 +129,14 @@ insert into ernaehrungskategoriezutat values (1004,5001);
 insert into rezept values (1001, 'Wiener Würstchen mit Tomate- Mozarella Salat und Süßkartoffelpommes');
 insert into rezept values (1002, 'Gemüsepatties mit Salat');
 insert into rezept values (1003, 'Couscous-bowl');
-
+insert into rezept values (1004, 'Tomate Mozarella');
  
 insert into rezeptzutat values (1001,5001,1);
 insert into rezeptzutat values (1001,1003,3);
 insert into rezeptzutat values (1001,3002,2);
 insert into rezeptzutat values (1001,1010,1);
 insert into rezeptzutat values (1001,1006,5);
+
 insert into rezeptzutat values (1002,1002,2);
 insert into rezeptzutat values (1002,1011,2);
 insert into rezeptzutat values (1002,1005,3);
@@ -145,6 +146,7 @@ insert into rezeptzutat values (1002,1009,10);
 insert into rezeptzutat values (1002,6300,1);
 insert into rezeptzutat values (1002,1003,3);
 insert into rezeptzutat values (1002,1007,1);
+
 insert into rezeptzutat values (1003,6408,1);
 insert into rezeptzutat values (1003,7043,1);
 insert into rezeptzutat values (1003,1008,2);
@@ -154,6 +156,10 @@ insert into rezeptzutat values (1003,1005,3);
 insert into rezeptzutat values (1003,1007,1);
 insert into rezeptzutat values (1003,1009,10);
 insert into rezeptzutat values (1003,9001,2);
+
+insert into rezeptzutat values (1004,1003,5);
+insert into rezeptzutat values (1004,3002,5);
+insert into rezeptzutat values (1004,1010,1);
 
 
 insert into bestellung (id, ref_kunde_id, bestelldatum, rechnungsbetrag) values (1,2001,'2020-07-01', 6.21);
