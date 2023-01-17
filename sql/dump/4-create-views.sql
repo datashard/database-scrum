@@ -16,12 +16,6 @@ select
     join adresse a on l.ref_adresse_id=a.id
     join region r on a.ref_region_id=r.id;
 
-create view v_kunden_bestellungen_zutaten as
-select k.id as kunde_id, z.id as zutat_id, b.id as bestellung_id, k.vorname, k.nachname, b.rechnungsbetrag, bz.menge, z.einheit, z.kalorien, z.kohlenhydrate, z.protein, z.nettopreis from kunde k
-left join bestellung b on b.ref_kunde_id = k.id
-left join bestellungzutat bz on bz.ref_bestellung_id = b.id
-left join zutat z on z.id = bz.ref_zutat_id;
-
 create view v_zutaten_rezepte_ernaehrungskategorien as
 select z.id, z.bezeichnung, z.einheit, z.nettopreis, z.bestand, z.kalorien, z.kohlenhydrate, z.protein, r.rezeptname, e.ernaehrungskategoriename from zutat z
 left join rezeptzutat rz on z.id = rz.ref_zutat_id
@@ -48,3 +42,24 @@ select r.rezeptname,
 (select count(vzre2.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre2 where vzre2.rezeptname = r.rezeptname and vzre2.ernaehrungskategoriename = "Low Carb") anzahllow_carb,
 (select count(vzre3.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre3 where vzre3.rezeptname = r.rezeptname and vzre3.ernaehrungskategoriename = "High Carb") anzahlhigh_carb
 from rezept r;
+
+create view v_kunden_bestellungen_zutaten_zutaten as
+select k.id as kunde_id,b.id as bestell_id, z.id as zutat_id, bz.menge, z.einheit, z.bezeichnung, z.kalorien, z.kohlenhydrate, z.protein, z.nettopreis from kunde k
+left join bestellung b on b.ref_kunde_id = k.id
+left join bestellungzutat bz on bz.ref_bestellung_id = b.id
+left join zutat z on z.id = bz.ref_zutat_id
+where z.id is not null;
+
+create view v_kunden_bestellungen_rezepte_zutaten as
+select k.id as kunde_id, b.id as bestell_id, z.id as zutat_id, rz.menge, z.einheit, z.bezeichnung, z.kalorien, z.kohlenhydrate, z.protein, z.nettopreis from kunde k
+left join bestellung b on b.ref_kunde_id = k.id
+left join bestellungrezept br on br.ref_bestellung_id = b.id
+left join rezept r on r.id = br.ref_rezept_id
+left join rezeptzutat rz on rz.ref_rezept_id = r.id
+left join zutat z on z.id = rz.ref_zutat_id
+where z.id is not null;
+
+create view v_kunden_bestellungen_zutaten as
+select * from v_kunden_bestellungen_rezepte_zutaten
+union
+select * from v_kunden_bestellungen_zutaten_zutaten;
