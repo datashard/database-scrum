@@ -162,6 +162,8 @@ insert into rezeptzutat values (1004,3002,5);
 insert into rezeptzutat values (1004,1010,1);
 
 
+# Bestellungen
+
 insert into bestellung (id, ref_kunde_id, bestelldatum, rechnungsbetrag) values (1,2001,'2020-07-01', 6.21);
 insert into bestellung (id, ref_kunde_id, bestelldatum, rechnungsbetrag) values (2,2002,'2020-07-08', 32.96);
 insert into bestellung (id, ref_kunde_id, bestelldatum, rechnungsbetrag) values (3,2003,'2020-08-01',24.08);
