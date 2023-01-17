@@ -63,3 +63,22 @@ create view v_kunden_bestellungen_zutaten as
 select * from v_kunden_bestellungen_rezepte_zutaten
 union
 select * from v_kunden_bestellungen_zutaten_zutaten;
+
+create view v_bestellung_zutat_werte as 
+select
+	bz.ref_bestellung_id as bestellung_id,z.id as zutat_id, bz.menge as menge,
+     z.bezeichnung, z.einheit, 
+    (z.nettopreis * menge) as preis, 
+    (z.kalorien * menge) as kalorien,
+    (z.kohlenhydrate * menge) as kohlenhydrate,
+    (z.protein * menge) as protein
+from bestellungzutat bz
+join zutat z on bz.ref_zutat_id=z.id;
+
+create view v_dsvgo as
+select 
+	b.id, k.id as kunde_id, bestelldatum, rechnungsbetrag,
+    k.vorname, k.nachname, k.email, k.telefon, k.strasse, k.hausnummer, k.plz, k.ort
+from
+	bestellung b 
+join v_kunden_adressen_regionen k on b.ref_kunde_id=k.id;
