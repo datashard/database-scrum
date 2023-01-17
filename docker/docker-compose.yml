@@ -15,6 +15,10 @@ services:
       - MYSQL_PASSWORD=admin
       - MYSQL_ROOT_PASSWORD=root
       - LANG=C.UTF_8
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
     volumes:
 #      - ./mysql:/var/lib/mysql
       - ../sql/dump:/docker-entrypoint-initdb.d
@@ -24,3 +28,23 @@ services:
         "--character-set-server=utf8mb4",
         "--collation-server=utf8mb4_unicode_ci",
       ]
+  web:
+    container_name: web
+    depends_on:
+      db:
+        condition: service_healthy
+    build: ../web
+    ports:
+      - 80:3000
+    restart: unless-stopped
+
+  api:
+    container_name: api
+    depends_on:
+      db:
+        condition: service_healthy
+    image: deno
+    restart: always
+    build: ../api
+    ports:
+      - 81:3000
