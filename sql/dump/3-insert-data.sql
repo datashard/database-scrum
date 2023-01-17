@@ -67,8 +67,8 @@ insert into zutat values (3001, 'Vollmilch. 3.5%', 'Liter', 1.5, 50, 103, 65, 4.
 insert into zutat values (3002, 'Mozzarella', 'Packung', 3.5, 20, 103, 241, 1, 18.1, 10);
 insert into zutat values (3003, 'Butter', 'Stück', 3.0, 50, 103, 741, 0.6, 0.7, 10);
 insert into zutat values (4001, 'Ei', 'Stück', 0.4, 300, 102, 137, 1.5, 11.9, 10);
-insert into zutat values (5001, 'Wiener Würstchen', 'Paar', 1.8, 40, 101, 331, 1.2, 9.9, 10);
-insert into zutat values (9001, 'Tofu-Würstchen', 'Stück', 1.8, 20, 103, 252, 7, 17, 10);
+insert into zutat values (5001, 'Wiener Würstchen', 'Paar', 1.8, 40, 101, 331, 1.2, 9.9, 30);
+insert into zutat values (9001, 'Tofu-Würstchen', 'Stück', 1.8, 20, 103, 252, 7, 17, 20);
 insert into zutat values (6408, 'Couscous', 'Packung', 1.9, 15, 102, 351, 67, 12, 10);
 insert into zutat values (7043, 'Gemüsebrühe', 'Würfel', 0.2, 4000, 101, 1, 0.5, 0.5, 10);
 insert into zutat values (6300, 'Kichererbsen', 'Dose', 1.0, 400, 103, 150, 21.2, 9, 10);
