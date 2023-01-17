@@ -48,3 +48,23 @@ select r.rezeptname,
 (select count(vzre2.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre2 where vzre2.rezeptname = r.rezeptname and vzre2.ernaehrungskategoriename = "Low Carb") anzahllow_carb,
 (select count(vzre3.bezeichnung) from v_zutaten_rezepte_ernaehrungskategorien vzre3 where vzre3.rezeptname = r.rezeptname and vzre3.ernaehrungskategoriename = "High Carb") anzahlhigh_carb
 from rezept r;
+
+
+create view v_bestellung_zutat_werte as 
+select
+	bz.ref_bestellung_id as bestellung_id,z.id as zutat_id, bz.menge as menge,
+     z.bezeichnung, z.einheit, 
+    (z.nettopreis * menge) as preis, 
+    (z.kalorien * menge) as kalorien,
+    (z.kohlenhydrate * menge) as kohlenhydrate,
+    (z.protein * menge) as protein
+from bestellungzutat bz
+join zutat z on bz.ref_zutat_id=z.id;
+
+create view v_dsvgo as
+select 
+	b.id, k.id as kunde_id, bestelldatum, rechnungsbetrag,
+    k.vorname, k.nachname, k.email, k.telefon, k.strasse, k.hausnummer, k.plz, k.ort
+from
+	bestellung b 
+join v_kunden_adressen_regionen k on b.ref_kunde_id=k.id;

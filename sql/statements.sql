@@ -1,3 +1,6 @@
+-- 2.1
+select * from v_dsvgo d where d.kunde_id = 2007;
+
 -- 3.1
 select distinct count(bezeichnung), bezeichnung from v_zutaten_rezepte_ernaehrungskategorien where rezeptname = "Couscous-bowl" group by bezeichnung;	
 
