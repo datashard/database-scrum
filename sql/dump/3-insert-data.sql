@@ -195,3 +195,9 @@ insert into bestellungzutat(ref_bestellung_id, ref_zutat_id, menge) values (10, 
 insert into bestellungzutat(ref_bestellung_id, ref_zutat_id, menge) values (11, 5001, 2);
 insert into bestellungzutat(ref_bestellung_id, ref_zutat_id, menge) values (11, 1012, 5);
 insert into bestellungzutat(ref_bestellung_id, ref_zutat_id, menge) values (12, 1010, 15);
+
+insert into bestellungrezept values (1, 1001, 1);
+insert into bestellungrezept values (3, 1002, 1);
+insert into bestellungrezept values (7, 1003, 2);
+insert into bestellungrezept values (3, 1002, 1);
+insert into bestellungrezept values (9, 1001, 2);

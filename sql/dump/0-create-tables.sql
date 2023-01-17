@@ -64,7 +64,6 @@ create table zutat (
         references lieferant(id)
 );
 
-
 create table bestellungzutat (
     ref_bestellung_id integer not null,
     ref_zutat_id integer not null,
@@ -72,9 +71,6 @@ create table bestellungzutat (
     foreign key (ref_bestellung_id) references bestellung(id),
     foreign key (ref_zutat_id) references zutat(id)
 );
-
-
-
 
 create table rezept (
     id integer not null,

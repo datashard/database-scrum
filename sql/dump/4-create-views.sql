@@ -38,7 +38,7 @@ create view v_rezepte_zutaten_anzahl as
 select r.rezeptname, (select count(vrz.bezeichnung) from v_rezepte_zutaten vrz where vrz.rezeptname = r.rezeptname) zutatenanzahl from rezept r;
 
 create view v_rezepte_kalorien as
-select r.rezeptname, (select sum(vrzk2.kalorien) from v_zutaten_rezepte_ernaehrungskategorien vrzk2 where vrzk2.rezeptname = r.rezeptname) kalorien from rezept r;
+select r.id, r.rezeptname, (select sum(z.kalorien) from rezept r1 right join rezeptzutat rz on r1.id = rz.ref_rezept_id right join zutat z on z.id = rz.ref_zutat_id where r1.id = r.id) kalorien from rezept r;
 
 create view v_rezept_kategorien_anzahl as
 select r.rezeptname,
