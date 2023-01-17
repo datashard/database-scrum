@@ -125,5 +125,13 @@ create table ernaehrungskategoriezutat (
 create table zutatenbilder (
     ref_zutat_id integer not null,
     base longtext,
-    alt varchar(255)
-)
+    alt varchar(255),
+    foreign key(ref_zutat_id) references zutat(id)
+);
+
+create table rezeptebilder (
+    ref_rezept_id integer not null,
+    base longtext,
+    alt varchar(255),
+    foreign key(ref_rezept_id) references rezept(id)
+);
