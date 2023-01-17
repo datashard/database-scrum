@@ -135,3 +135,9 @@ create table rezeptebilder (
     alt varchar(255),
     foreign key(ref_rezept_id) references rezept(id)
 );
+
+create table lieferanturl (
+    ref_lieferant_id integer not null,
+    link varchar(255),
+    foreign key(ref_lieferant_id) references lieferant(id)
+);
