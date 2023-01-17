@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+}
+
+.header {
+    background-image: url("https://www.gartenspring.de/wp-content/uploads/2018/06/lotus-917616_1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+}
+
+.container {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__nav {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.header__nav_ul {
+    margin: 0;
+    padding-left: 0;
+    text-align: right;
+}
+
+.header__nav_li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.header__nav_li:hover {
+    text-decoration: underline;
+}
+
+.header__nav_text {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.header__text {
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+    padding-top: 2rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.header__text_sub {
+    font-size: 1.25rem;
+    color: white;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+    padding-top: 3rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.heading__post {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.rezepte__container {
+    background-color: #E1DCCE;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-bottom: 4rem;
+}
+
+.rezepte__card_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -1rem -1rem -1rem -1rem;
+}
+
+.rezept__card {
+    position: relative;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    margin: 1rem;
+    flex: 0 0 22.3333rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    will-change: transform;
+    transform: scale(1);
+    transition: transform 0.25s ease-in-out;
+}
+
+.rezept__card:hover {
+    transform: scale(1.05);
+}
+
+.rezept__text_container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 1.5rem;
+    background-color: rgb(248, 248, 248, 0.5);
+    backdrop-filter: blur(0.5em);
+}
+
+.rezept__card_img {
+    display: block;
+    height: 27rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: 40% 0;
+}
+
+.button {
+    display: inline-block;
+    height: 2em;
+    width: 10em;
+    padding-top: 0.4rem;
+    margin-top: 1rem;
+    border-radius: 10em;
+    background-color: #83a980;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.zutaten__container {
+    margin-bottom: 5em;
+}
+
+.heading__zutaten {
+    color: #83A980FF;
+    text-shadow: none;
+}
+
+.zutaten__card_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -1rem -1rem -1rem -1rem;
+}
+
+.zutaten__card {
+    position: relative;
+    background-color: #83a980;
+    color: white;
+    border-radius: 10px;
+    width: 16em;
+}
+
+.zutat__name {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.zutat__name::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 0.13rem;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.zutat__nutrition {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.zutaten__nutrition_liste {
+    border: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+.zutaten__nutrition_liste > tbody > tr:nth-child(1n) {
+    background-color: #b0dead;
+
+}
+
+.zutaten__nutrition_liste > tbody > tr:nth-child(2n) {
+    background-color: #83a980;
+
+}
+
+.zutaten__nutrition_liste_name {
+    text-align: left;
+    padding-left: 0.75em;
+}
+
+.zutaten__nutrition_liste_einheit {
+    text-align: right;
+    padding-left: 2.5em;
+}
+
