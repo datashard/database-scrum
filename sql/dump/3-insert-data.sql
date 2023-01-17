@@ -50,28 +50,28 @@ insert into lieferant values  (103, 'Molkerei Henning', 2012, '038873-8976', 'in
 
 # Zutaten  (id, bezeichnung, einheit, nettopreis, bestand, ref_lieferant_id, kalorien, kohlenhydrate, protein) 
 
-insert into zutat values (1001,'Zucchini','Stück', 0.89, 100, 101,19,2,1.6);
-insert into zutat values (1002,'Zwiebel','Stück', 0.15, 50, 101, 28, 4.9, 1.20);
-insert into zutat values (1003, 'Tomate', 'Stück', 0.45, 50, 101, 18, 2.6, 1);
-insert into zutat values (1004, 'Schalotte', 'Stück', 0.20, 500, 101, 25, 3.3, 1.5);
-insert into zutat values (1005, 'Karotte', 'Stück', 0.30, 500, 101, 41, 10, 0.9);
-insert into zutat values (1006, 'Kartoffel', 'Stück', 0.15, 1500, 101, 71, 14.6, 2);
-insert into zutat values (1007, 'Rucola', 'Bund', 0.90, 10, 101, 27, 2.1, 2.6);
-insert into zutat values (1008, 'Lauch', 'Stück', 1.2, 35, 101, 29, 3.3, 2.1);
-insert into zutat values (1009, 'Knoblauch', 'Stück', 0.25, 250, 101, 141, 28.4, 6.1);
-insert into zutat values (1010, 'Basilikum', 'Bund', 1.3, 10, 101, 41, 5.1, 3.1);
-insert into zutat values (1011, 'Süßkartoffel', 'Stück', 2.0, 200, 101, 86, 20, 1.6);
-insert into zutat values (1012, 'Schnittlauch', 'Bund', 0.9, 10, 101, 28, 1, 3);
-insert into zutat values (2001, 'Apfel', 'Stück', 1.2, 750, 102, 54, 14.4, 0.3);
-insert into zutat values (3001, 'Vollmilch. 3.5%', 'Liter', 1.5, 50, 103, 65, 4.7, 3.4);
-insert into zutat values (3002, 'Mozzarella', 'Packung', 3.5, 20, 103, 241, 1, 18.1);
-insert into zutat values (3003, 'Butter', 'Stück', 3.0, 50, 103, 741, 0.6, 0.7);
-insert into zutat values (4001, 'Ei', 'Stück', 0.4, 300, 102, 137, 1.5, 11.9);
-insert into zutat values (5001, 'Wiener Würstchen', 'Paar', 1.8, 40, 101, 331, 1.2, 9.9);
-insert into zutat values (9001, 'Tofu-Würstchen', 'Stück', 1.8, 20, 103, 252, 7, 17);
-insert into zutat values (6408, 'Couscous', 'Packung', 1.9, 15, 102, 351, 67, 12);
-insert into zutat values (7043, 'Gemüsebrühe', 'Würfel', 0.2, 4000, 101, 1, 0.5, 0.5);
-insert into zutat values (6300, 'Kichererbsen', 'Dose', 1.0, 400, 103, 150, 21.2, 9);
+insert into zutat values (1001,'Zucchini','Stück', 0.89, 100, 101,19,2,1.6, 3007);
+insert into zutat values (1002,'Zwiebel','Stück', 0.15, 50, 101, 28, 4.9, 1.20, 3007);
+insert into zutat values (1003, 'Tomate', 'Stück', 0.45, 50, 101, 18, 2.6, 1, 3007);
+insert into zutat values (1004, 'Schalotte', 'Stück', 0.20, 500, 101, 25, 3.3, 1.5, 3007);
+insert into zutat values (1005, 'Karotte', 'Stück', 0.30, 500, 101, 41, 10, 0.9, 3007);
+insert into zutat values (1006, 'Kartoffel', 'Stück', 0.15, 1500, 101, 71, 14.6, 2, 3007);
+insert into zutat values (1007, 'Rucola', 'Bund', 0.90, 10, 101, 27, 2.1, 2.6, 3007);
+insert into zutat values (1008, 'Lauch', 'Stück', 1.2, 35, 101, 29, 3.3, 2.1, 3007);
+insert into zutat values (1009, 'Knoblauch', 'Stück', 0.25, 250, 101, 141, 28.4, 6.1, 3007);
+insert into zutat values (1010, 'Basilikum', 'Bund', 1.3, 10, 101, 41, 5.1, 3.1, 3007);
+insert into zutat values (1011, 'Süßkartoffel', 'Stück', 2.0, 200, 101, 86, 20, 1.6, 3007);
+insert into zutat values (1012, 'Schnittlauch', 'Bund', 0.9, 10, 101, 28, 1, 3, 3007);
+insert into zutat values (2001, 'Apfel', 'Stück', 1.2, 750, 102, 54, 14.4, 0.3, 3007);
+insert into zutat values (3001, 'Vollmilch. 3.5%', 'Liter', 1.5, 50, 103, 65, 4.7, 3.4, 3007);
+insert into zutat values (3002, 'Mozzarella', 'Packung', 3.5, 20, 103, 241, 1, 18.1, 3007);
+insert into zutat values (3003, 'Butter', 'Stück', 3.0, 50, 103, 741, 0.6, 0.7, 3007);
+insert into zutat values (4001, 'Ei', 'Stück', 0.4, 300, 102, 137, 1.5, 11.9, 3007);
+insert into zutat values (5001, 'Wiener Würstchen', 'Paar', 1.8, 40, 101, 331, 1.2, 9.9, 3007);
+insert into zutat values (9001, 'Tofu-Würstchen', 'Stück', 1.8, 20, 103, 252, 7, 17, 3007);
+insert into zutat values (6408, 'Couscous', 'Packung', 1.9, 15, 102, 351, 67, 12, 3007);
+insert into zutat values (7043, 'Gemüsebrühe', 'Würfel', 0.2, 4000, 101, 1, 0.5, 0.5, 3007);
+insert into zutat values (6300, 'Kichererbsen', 'Dose', 1.0, 400, 103, 150, 21.2, 9, 3007);
 
 # Beschränkungen
 
