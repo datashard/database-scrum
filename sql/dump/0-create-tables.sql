@@ -59,6 +59,7 @@ create table zutat (
     kalorien integer,
     kohlenhydrate decimal(10,2),
     protein decimal(10,2),
+    co2 decimal(10,2),
     primary key(id),
     foreign key (ref_lieferant_id)
         references lieferant(id)
