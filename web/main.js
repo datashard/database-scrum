@@ -31,6 +31,19 @@ function createLieferant({ name, adresse, url }) {
     return `<p class="lieferant__name">${name}<br/><span class="lieferant__adresse">${adresse}</span></p>`
 }
 
+function createRezept({ rezept, base, kategorie }) {
+    return `
+            <div class="rezept__card">
+                <img class="rezept__card_img" src="data:image/jpg;base64,${base}" alt="omnivore">
+                <div class="rezept__text_container">
+                    <h4 class="rezept__text">${rezept}</h4>
+                    <p class="rezept__kategorie">${kategorie}</p>
+                    <a href="#" class="button">Jetzt Bestellen</a>
+                </div>
+            </div>
+    `
+}
+
 async function getAllZutaten() {
     const zutaten = await $.ajax({
         type: 'GET',
@@ -66,6 +79,26 @@ async function getAllLieferanten() {
         )
     })
 }
+async function getAllRezepte() {
+    const rezepte = await $.ajax({
+        type: 'GET',
+        url: `${API_DOMAIN}/rezepte`,
+        crossDomain: true,
+    })
 
-getAllZutaten()
+    console.log(rezepte)
+
+    rezepte.forEach((r) => {
+        $(".rezepte__card_container").append(
+            createRezept({
+                rezept: r.rezeptname,
+                base: r.base,
+                kategorie: r.kategorie
+            }),
+        )
+    })
+}
+
+getAllRezepte();
+getAllZutaten();
 getAllLieferanten();

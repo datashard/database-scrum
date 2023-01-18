@@ -6,7 +6,7 @@ import statements from "./statements.ts"
 const router = new Router();
 const pool = mysql2.createPool({ host: "db", user: "admin", password: "admin", database: "krautundrueben", connectionLimit: 4 });
 // helper
-const query = async (sql) => (await pool.query(sql))[0]
+const query = async (sql: string) => (await pool.query(sql))[0]
 
 
 
@@ -18,8 +18,12 @@ router.get("/dsvgo/:kunde", async (context) => {
 router.get("/zutaten", async (context) => {
     context.response.body = await query(statements.zutaten)
 })
+
 router.get("/lieferanten", async (context) => {
     context.response.body = await query(statements.lieferanten)
+})
+router.get("/rezepte", async (context) => {
+    context.response.body = await query(statements.rezepte)
 })
 
 
