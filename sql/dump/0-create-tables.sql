@@ -2,6 +2,20 @@ drop database if exists krautundrueben;
 create database if not exists krautundrueben;
 use krautundrueben;
 
+create table zutatenbilder (
+    id integer not null,
+    base longtext,
+    alt varchar(255),
+    primary key (id)
+);
+
+create table rezeptebilder (
+    id integer not null,
+    base longtext,
+    alt varchar(255),
+    primary key (id)
+);
+
 create table region(
     id integer not null,
     plz varchar(5),
@@ -36,6 +50,7 @@ create table lieferant (
     ref_adresse_id integer not null,
     telefon varchar(25),
     email varchar(50),
+    link varchar(255),
     primary key(id),
     foreign key (ref_adresse_id) references adresse(id)
 );
@@ -60,9 +75,11 @@ create table zutat (
     kohlenhydrate decimal(10,2),
     protein decimal(10,2),
     co2 decimal(10,2),
+    ref_zutatenbilder_id integer,
     primary key(id),
     foreign key (ref_lieferant_id)
-        references lieferant(id)
+        references lieferant(id),
+    foreign key (ref_zutatenbilder_id) references zutatenbilder (id)
 );
 
 create table bestellungzutat (
@@ -76,7 +93,9 @@ create table bestellungzutat (
 create table rezept (
     id integer not null,
     rezeptname varchar(255),
-    primary key(id)
+    ref_rezeptebilder_id integer,
+    primary key(id),
+    foreign key (ref_rezeptebilder_id) references rezeptebilder (id)
 );
 
 create table rezeptzutat (
@@ -120,24 +139,4 @@ create table ernaehrungskategoriezutat (
     ref_zutat_id integer not null,
     foreign key (ref_ernaehrungskategorie_id) references ernaehrungskategorie(id),
     foreign key (ref_zutat_id) references zutat(id)
-);
-
-create table zutatenbilder (
-    ref_zutat_id integer not null,
-    base longtext,
-    alt varchar(255),
-    foreign key(ref_zutat_id) references zutat(id)
-);
-
-create table rezeptebilder (
-    ref_rezept_id integer not null,
-    base longtext,
-    alt varchar(255),
-    foreign key(ref_rezept_id) references rezept(id)
-);
-
-create table lieferanturl (
-    ref_lieferant_id integer not null,
-    link varchar(255),
-    foreign key(ref_lieferant_id) references lieferant(id)
 );
