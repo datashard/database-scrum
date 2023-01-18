@@ -18,6 +18,9 @@ router.get("/dsvgo/:kunde", async (context) => {
 router.get("/zutaten", async (context) => {
     context.response.body = await query(statements.zutaten)
 })
+router.get("/lieferanten", async (context) => {
+    context.response.body = await query(statements.lieferanten)
+})
 
 
 

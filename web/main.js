@@ -1,4 +1,4 @@
-const API_DOMAIN = "http://localhost:81"
+const API_DOMAIN = 'http://localhost:81'
 
 let zutaten_conatiner = document.querySelector('.zutaten__card_container')
 function createZutat({ zutat, kohlenhydrate, protein, kalorien, base, alt }) {
@@ -27,22 +27,45 @@ function createZutat({ zutat, kohlenhydrate, protein, kalorien, base, alt }) {
     `
 }
 
-
-async function getAllZutaten() {
-    let zutaten = await $.ajax({
-        type: "GET",
-        url: `${API_DOMAIN}/zutaten`,
-        crossDomain: true
-    })
-    zutaten.forEach(zutat => {
-        $('.zutaten__card_container').append(createZutat({
-            zutat: zutat.bezeichnung,
-            kalorien: parseFloat(zutat.kalorien).toFixed(1),
-            kohlenhydrate: parseFloat(zutat.kohlenhydrate).toFixed(1),
-            protein: parseFloat(zutat.protein).toFixed(1),
-            base: zutat.base
-        }));
-    });
+function createLieferant({ name, adresse, url }) {
+    return `<p class="lieferant__name">${name}<br/><span class="lieferant__adresse">${adresse}</span></p>`
 }
 
-getAllZutaten();
+async function getAllZutaten() {
+    const zutaten = await $.ajax({
+        type: 'GET',
+        url: `${API_DOMAIN}/zutaten`,
+        crossDomain: true,
+    })
+    zutaten.forEach((zutat) => {
+        $('.zutaten__card_container').append(
+            createZutat({
+                zutat: zutat.bezeichnung,
+                kalorien: parseFloat(zutat.kalorien).toFixed(1),
+                kohlenhydrate: parseFloat(zutat.kohlenhydrate).toFixed(1),
+                protein: parseFloat(zutat.protein).toFixed(1),
+                base: zutat.base,
+            }),
+        )
+    })
+}
+
+async function getAllLieferanten() {
+    const lieferanten = await $.ajax({
+        type: 'GET',
+        url: `${API_DOMAIN}/lieferanten`,
+        crossDomain: true,
+    })
+
+    lieferanten.forEach((l) => {
+        $(".lieferanten__container_abschnitt").append(
+            createLieferant({
+                name: l.lieferantenname,
+                adresse: `${l.strasse} ${l.hausnummer}, ${l.plz} ${l.ort}`
+            }),
+        )
+    })
+}
+
+getAllZutaten()
+getAllLieferanten();
