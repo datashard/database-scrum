@@ -16,7 +16,7 @@ body {
     background-image: url("https://www.gartenspring.de/wp-content/uploads/2018/06/lotus-917616_1920.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 75%;
+    background-position: 50% 45%;
 }
 
 .container {
@@ -227,12 +227,10 @@ body {
 
 .zutaten__nutrition_liste > tbody > tr:nth-child(1n) {
     background-color: #b0dead;
-
 }
 
 .zutaten__nutrition_liste > tbody > tr:nth-child(2n) {
     background-color: #83a980;
-
 }
 
 .zutaten__nutrition_liste_name {
@@ -245,3 +243,35 @@ body {
     padding-left: 2em;
 }
 
+.lieferanten__container {
+    background-image: url("https://media01.stockfood.com/largepreviews/MzcwOTk5NTA2/11967726-Person-auf-Gemuesefeld-haelt-frisch-geerntete-Rote-Bete-in-den-Haenden.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.lieferanten__container_abschnitt::before {
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 0.13rem;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.lieferant__name{
+    max-width: 50rem;
+    font-size: 1.25rem;
+    color: white;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    background-color: transparent;
+    backdrop-filter: blur(0.25em);
+    padding-bottom: 2rem;
+}
+
+.lieferant__adresse {
+    font-weight: normal;
+}
