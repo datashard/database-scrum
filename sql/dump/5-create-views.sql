@@ -9,7 +9,7 @@ create view v_kunden_adressen_regionen as
 
 create view v_liefereanten_adressen_regionen as
 select 
-    	l.id as lieferant_id, lieferantenname, telefon, email,
+    	l.id as lieferant_id, lieferantenname, telefon, email, link,
         strasse, hausnummer,
         plz, ort
     from lieferant l
