@@ -27,8 +27,8 @@ function createZutat({ zutat, kohlenhydrate, protein, kalorien, base, alt }) {
     `
 }
 
-function createLieferant({ name, adresse, url }) {
-    return `<p class="lieferant__name">${name}<br/><span class="lieferant__adresse">${adresse}</span></p>`
+function createLieferant({ name, adresse, link }) {
+    return `<a href="${link}"><p class="lieferant__name">${name}<br/><span class="lieferant__adresse">${adresse}</span></p></a>`
 }
 
 function createRezept({ rezept, base, kategorie }) {
@@ -74,7 +74,8 @@ async function getAllLieferanten() {
         $(".lieferanten__container_abschnitt").append(
             createLieferant({
                 name: l.lieferantenname,
-                adresse: `${l.strasse} ${l.hausnummer}, ${l.plz} ${l.ort}`
+                adresse: `${l.strasse} ${l.hausnummer}, ${l.plz} ${l.ort}`,
+                link: l.link
             }),
         )
     })
@@ -89,11 +90,31 @@ async function getAllRezepte() {
     console.log(rezepte)
 
     rezepte.forEach((r) => {
+        let category
+
+        switch (r.rezeptname) {
+            case "Wiener Würstchen mit Tomate- Mozarella Salat und Süßkartoffelpommes":
+                category = "Omnivore"
+                break;
+            case "Gemüsepatties mit Salat":
+                category = "Vegetarisch"
+                break;
+            case "Couscous-bowl":
+                category = "Vegan"
+                break;
+            case "Tomate Mozarella":
+                category = "Low Carb"
+                break;
+
+            default:
+                break;
+        }
+
         $(".rezepte__card_container").append(
             createRezept({
                 rezept: r.rezeptname,
                 base: r.base,
-                kategorie: r.kategorie
+                kategorie: category
             }),
         )
     })
