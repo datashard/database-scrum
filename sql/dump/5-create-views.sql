@@ -86,7 +86,8 @@ select
     (z.nettopreis * menge) as preis, 
     (z.kalorien * menge) as kalorien,
     (z.kohlenhydrate * menge) as kohlenhydrate,
-    (z.protein * menge) as protein
+    (z.protein * menge) as protein,
+    (z.co2 * menge) as co2
 from bestellungzutat bz
 join zutat z on bz.ref_zutat_id=z.id;
 
