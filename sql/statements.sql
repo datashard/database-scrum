@@ -23,7 +23,7 @@ select rezeptname from v_rezepte_kalorien where kalorien < 1000;
 select vrka.rezeptname from v_rezept_kategorien_anzahl vrka where vrka.anzahlzutaten < 5;
 
 -- 3.8
-select vrka.rezeptname from v_rezept_kategorien_anzahl vrka where vrka.anzahlzutaten < 10 and vrka.anzahlvegan = vrka.anzahlzutaten;
+select vrka.rezeptname from v_rezept_kategorien_anzahl vrka where vrka.anzahlzutaten < 5 and vrka.anzahlvegetarisch = vrka.anzahlzutaten;
 
 -- 3.9
-delete from kunde where id=2007
+delete from kunde where id=2007;
