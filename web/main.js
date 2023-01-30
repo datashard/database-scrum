@@ -1,7 +1,7 @@
 const API_DOMAIN = 'http://localhost:81'
 
 let zutaten_conatiner = document.querySelector('.zutaten__card_container')
-function createZutat({ zutat, kohlenhydrate, protein, kalorien, base, alt }) {
+function createZutat({ zutat, kohlenhydrate, protein, kalorien, base, alt, co2 }) {
     return `
     <div class="zutaten__card">
         <img class="zutaten__card_img" src="data:image/jpg;base64,${base}" alt="${zutat}">
@@ -10,16 +10,20 @@ function createZutat({ zutat, kohlenhydrate, protein, kalorien, base, alt }) {
         <table class="zutaten__nutrition_liste">
             <tbody>
                 <tr>
-                    <th class="zutaten__nutrition_liste_name">Kohlenhydrate:</th>
+                    <th class="zutaten__nutrition_liste_name">Kohlenhydrate</th>
                     <td class="zutaten__nutrition_liste_einheit">${kohlenhydrate}kcal</td>
                 </tr>
                 <tr>
-                    <th class="zutaten__nutrition_liste_name">Proteine:</th>
+                    <th class="zutaten__nutrition_liste_name">Proteine</th>
                     <td class="zutaten__nutrition_liste_einheit">${protein}g</td>
                 </tr>
                 <tr>
-                    <th class="zutaten__nutrition_liste_name">Kalorien:</th>
+                    <th class="zutaten__nutrition_liste_name">Kalorien</th>
                     <td class="zutaten__nutrition_liste_einheit">${kalorien}g</td>
+                </tr>
+                <tr>
+                    <th class="zutaten__nutrition_liste_name">Co2-Aq.</th>
+                    <td class="zutaten__nutrition_liste_einheit">${co2}</td>
                 </tr>
             </tbody>
         </table>
@@ -58,6 +62,7 @@ async function getAllZutaten() {
                 kohlenhydrate: parseFloat(zutat.kohlenhydrate).toFixed(1),
                 protein: parseFloat(zutat.protein).toFixed(1),
                 base: zutat.base,
+                co2: zutat.co2
             }),
         )
     })
