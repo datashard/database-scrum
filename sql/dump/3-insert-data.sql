@@ -115,6 +115,25 @@ insert into ernaehrungskategoriezutat values (1001,6300);
 insert into ernaehrungskategoriezutat values (1001,6408);
 insert into ernaehrungskategoriezutat values (1001,7043);
 insert into ernaehrungskategoriezutat values (1001,9001);
+
+insert into ernaehrungskategoriezutat values (1002,1001);
+insert into ernaehrungskategoriezutat values (1002,1002);
+insert into ernaehrungskategoriezutat values (1002,1003);
+insert into ernaehrungskategoriezutat values (1002,1004);
+insert into ernaehrungskategoriezutat values (1002,1005);
+insert into ernaehrungskategoriezutat values (1002,1006);
+insert into ernaehrungskategoriezutat values (1002,1007);
+insert into ernaehrungskategoriezutat values (1002,1008);
+insert into ernaehrungskategoriezutat values (1002,1009);
+insert into ernaehrungskategoriezutat values (1002,1010);
+insert into ernaehrungskategoriezutat values (1002,1011);
+insert into ernaehrungskategoriezutat values (1002,1012);
+insert into ernaehrungskategoriezutat values (1002,2001);
+insert into ernaehrungskategoriezutat values (1002,6300);
+insert into ernaehrungskategoriezutat values (1002,6408);
+insert into ernaehrungskategoriezutat values (1002,7043);
+insert into ernaehrungskategoriezutat values (1002,9001);
+
 insert into ernaehrungskategoriezutat values (1002,3001);
 insert into ernaehrungskategoriezutat values (1002,3002);
 insert into ernaehrungskategoriezutat values (1002,3003);
